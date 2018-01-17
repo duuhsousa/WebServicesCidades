@@ -13,7 +13,7 @@ namespace WebServicesCidades.Controllers
         
         [HttpGet]
         public IEnumerable<Cidades> Get(){
-            return cidade.Listar();
+            return cidade.Listar(); 
         }
 
     }
