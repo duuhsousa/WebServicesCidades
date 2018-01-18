@@ -124,7 +124,7 @@ namespace WebServicesCidades.Models
                 conn = new SqlConnection(conexao);
                 conn.Open();
                 cmd=new SqlCommand();
-                
+                cmd.Connection = conn;
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "update Cidades set nome=@n, estado=@e, habitantes=@h where id = @id";
                 

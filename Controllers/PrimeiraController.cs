@@ -34,5 +34,10 @@ namespace WebServicesCidades.Controllers
             dao.Excluir(id);
         }
 
+        [HttpPut]
+        public IActionResult Put([FromBody] Cidades cidades){
+            dao.Atualizar(cidades);
+            return CreatedAtRoute("CidadeAtual", new {id=cidades.Id}, cidades);
+        }
     }
 }
